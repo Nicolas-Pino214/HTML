@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #609d9f44;
+    color: #333;
+    line-height: 1.6;
+    margin:0;
+    padding: 0;
+}   
+
+header{
+    background-color: cadetblue;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+
+    /*NO Hacer sticky el header */
+    /*position: relative; */
+
+    /* hacer sticky el header */
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: cadetblue;
+}
+
+.layout-grid{
+    display: grid;
+    grid-template-columns:280px 1fr;
+    gap: 0px;
+    padding: 0px;
+    height: 100%;
+}
+/*section{
+    background-color: #fff;
+    border-radius: 20px;
+}*/
+
+    /*Ajustar la ubicacion de todos los elementos del diseño usando los "grid-area" que les corresponden */
+.sidebar{
+    background-color: cadetblue;
+    padding: 20px; 
+    position: sticky;
+    top: 0 ;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.sidebar h2{
+    color:#fff;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li{
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff9;
+    transition: color 0.3s
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    display: block;
+    margin: 10px auto
+}
+
+.portfolio{
+    display: grid; 
+    gap:20px  ;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    /*defino el nombre y ocupacion de cada área*/
+    grid-template-areas: 
+        "item1 item1 item1"
+        "item2 item3 item4"
+        "item5 item5 item5";
+    grid-auto-rows: auto;
+}
+/*Asignar cada hijo de item a un area especifica*/
+.item:nth-child(1){ grid-area: item1; }
+.item:nth-child(2){ grid-area: item2; }
+.item:nth-child(3){ grid-area: item3; }
+.item:nth-child(4){ grid-area: item4; }
+.item:nth-child(5){ grid-area: item5; 
+                    margin-bottom: 60px;}
+
+.item{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+footer{
+    background-color: cadetblue;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.mail{
+    color: rgb(180, 220, 220);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .layout-grid{
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "content_1"
+            "content_2"
+            "content_3"
+            "footer";
+    }
+}
