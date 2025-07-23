@@ -25,22 +25,74 @@ h2{
     color: cadetblue;
 }
 
-
-main{
+.layout-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+    gap: 20px;
     padding: 20px;
-    margin-bottom: 30px;    
+    grid-template-areas:
+        "header header header"
+        "sidebar content_1 content_2"
+        "sidebar content_3 content_3"
+        "footer footer footer";
 }
 
-section{
+    /*Ajustar la ubicacion de todos los elementos del diseño usando los "grid-area" que les corresponden */
+.sidebar{
+    grid-area: sidebar;
+    background-color: cadetblue;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4p 8px rgba(0, 0, 0, 0.3);
+}
+
+.content_1{
+    grid-area: content_1;
+}
+
+.content_2{
+    grid-area: content_2;
+}
+
+.content_3{
+    grid-area: content_3;
+}
+
+.sidebar h2{
+    color:#fff;
+}
+.sidebar ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li{
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff9;
+    transition: color 0.3s
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+}
+
+.content_1,.content_2, .content_3{
     background-color: #fff;
     border-radius: 20px;
     padding: 30px;
     padding-top: 10px;
-    margin-bottom: 20px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
-p, li {
+p {
     font-size: 1.2em;
     color: #333;
 }
