@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Encuesta sobre consumo energético</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Encuesta sobre consumo energético</h1>
+    </header>
+
+    <main class="form-container">
+        <form action="https://formspree.io/f/xpwldwry" method="POST">
+            <!-- GRUPO DE NFORMACIÓN PERSONAL -->
+             <fieldset>
+                <legend>Informacion personal</legend>
+
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Ingrese su Nombre Completo">
+
+                <label for="email">correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico">
+
+                <label for="location">Ubicación (Ciudad/Pais)</label>
+                <input type="text" id="location" name="location" required placeholder="Ingrese su ubicación">               
+             </fieldset>
+
+             <!-- GRUPO CONSUMO ENERGÉTICO ACTUAL -->
+
+             <fieldset>
+                <legend>Consumo Energetico Actual</legend>
+
+                <label for="energy_source">fuentes de Energia</label>
+                <select name="energy_source" id="energy_source"required>
+                  <option value="">Seleccione una opcion</option>
+                  <option value="electricidad">Electricidad</option>
+                  <option value="gas">Gas Natural</option>
+                  <option value="solar">Energía solar</option>
+                  <option value="eolica">Energía eólica</option>
+                  <option value="otra">Otra</option>
+                </select>
+
+                <label for="monthly_consumption">Consumo mensual (Kwh)</label>
+                <input type="number"
+                        id="monthly_consumption"
+                        name="monthly_consumption"
+                        placeholder="Ingrese su consumo mensual"
+                        required
+                        min="100"
+                        title="El consumo promedio promedio por hogar en colombia es de 157Kw">
+             </fieldset>
+
+             <!-- GRUPO INTERéS EN ENERGÍAS RENOVABLES -->
+              <fieldset>
+                <legend>Interés en Energías Renovables</legend>
+                <label for="interest_level">nivel de interes en energias Renovables</label>
+                <select name="interest_level" id="interest_level"required>
+                    <option value="">seleccione una opcion</option>
+                    <option value="alto">alto</option>
+                    <option value="medio">medio</option>
+                    <option value="bajo">bajo</option>  
+                </select>
+
+                <label for="adoption_interest">Disposición a Adoptar Enerías Renovables</label>
+                <input type="radio" id="yes" name="adoption_interest" value="si" required>Si
+                <input type="radio" id="no" name="adoption_interest" value="no">No
+              </fieldset>
+
+              <button type="submit">Enviar Encuesta</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>gracias por apoyar esta encuesta y la transición haca energias más sostenibles</p>
+    </footer>
+    
+</body>
+</html>
