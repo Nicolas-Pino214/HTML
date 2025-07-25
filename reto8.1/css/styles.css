@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#inputBox {
+    padding: 10px;
+    width: 50%;
+}
+
+#showBtn {
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#showBtn:hover {
+    background-color: rgb(17, 132, 161);
+}
+#outputBox{
+    margin-top: 20px;
+    padding: 10px;
+    background-color:white;
+    font-size: x-large;
+}
