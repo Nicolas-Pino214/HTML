@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdeLivr.net/npm/chart.js"></script>
+    <title>Visualizacion de Energias renovables</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Visualizacion de Datos de Energias Renovables</h1>
+    </header>
+
+    <nav class="navbar">
+
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#graficoPaises">Paises</a></li>
+            <li><a href="#graficoRegiones">Regiones</a></li>
+            <li><a href="#graficoComparativo">Evolucion</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <section class="grafico" id="graficoPaises">
+            <h2>Top 20 paises con mayor produccion de energia renovable</h2>
+            <canvas id="graficoBarrasPaises"></canvas>
+        </section>
+        
+        <section class="grafico" id="graficoRegiones">
+            <h2>produccion de energia renovable por Regiones</h2>
+            <canvas id="graficoBarrasRegiones"></canvas>
+        </section>
+        
+        <section class="grafico" id="graficoComparativo">
+            <h2>comparativa de produccion de energia renovable - Colomba vs. Suramerica (1965 - 2021)</h2>
+            <canvas id="graficoLineasComparativa"></canvas>
+        </section>
+    </div>
+
+        <footer class="footer">Creado por Nicolas Pino ✉️<a href="mailto:nicolas.pino@udea.educo" class="correo">nicolas.pino@udea.edu.co</a></footer>
+        
+        <script src="js/scripts.js"></script>
+</body>
+</html>
